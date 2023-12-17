@@ -16,4 +16,14 @@ char* get_input(void) {
 }
 
 
+//  units str1 and str2
+char* concat(char* str1, char* str2) {
+    int len = (int)strlen(str1);
+    str1 = realloc(str1, (len + strlen(str2)) * sizeof(char));
+    strcat(str1, str2);
+    
+    return str1;
+}
+
+
 #endif /* str_h */
