@@ -30,7 +30,8 @@ TREE* read_file(FILE *sourse) {
 //    read data from file
     char* buffer = (char*)malloc(MAX_LEN * sizeof(char));
     fgets(buffer, 128, sourse);
-    buffer[strlen(buffer) - 1] = '\0';
+    if (buffer[strlen(buffer) - 1] == '\n')
+        buffer[strlen(buffer) - 1] = '\0';
     int is_leaf = buffer[0] - '0';
     char* tmp = strtok(buffer, "01");
     char* val = (char*)malloc(MAX_LEN * sizeof(char));
