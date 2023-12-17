@@ -51,9 +51,9 @@ void add(TREE* unit, TREE* root) {
     
 //    get information for addition a new unit
     puts("Какое животное вы загадали? (в единственном числе, им. падеже)");
-    val = concat(get_input(), "\n");
+    val = get_input();
     puts("Каким вопросом можно его отличить от предложенного животного?");
-    question = concat(get_input(), "\n");
+    question = get_input();
     puts("Какой ответ должен быть ответ? д/н (да/нет)");
     answr = get_input();
     
